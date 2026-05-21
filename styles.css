@@ -38,8 +38,9 @@ body {
   line-height: 1.55;
   overflow-x: hidden;
   overscroll-behavior-y: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
+  font-synthesis: none;
+  text-rendering: auto;
+  -webkit-font-smoothing: subpixel-antialiased;
 }
 
 img,
@@ -113,7 +114,7 @@ textarea {
   color: #05070a;
   font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
   font-size: clamp(1.72rem, 4.1vw, 3.55rem);
-  font-weight: 650;
+  font-weight: 600;
   line-height: 1;
   letter-spacing: 0.01em;
   font-synthesis: none;
@@ -151,7 +152,7 @@ textarea {
 
 .has-js[data-intro="play"].intro-complete body > :not(.intro-preloader) {
   opacity: 1;
-  transform: translateY(0);
+  transform: none;
   transition:
     opacity 520ms var(--ease),
     transform 520ms var(--ease);
@@ -197,7 +198,7 @@ textarea {
   letter-spacing: 0;
   line-height: 1;
   font-synthesis: none;
-  text-rendering: geometricPrecision;
+  text-rendering: auto;
 }
 
 .site-nav {
@@ -336,7 +337,7 @@ footer {
   font-size: 3.08rem;
   line-height: 1.06;
   letter-spacing: 0;
-  font-weight: 760;
+  font-weight: 700;
 }
 
 .hero-copy h1 span,
@@ -370,7 +371,7 @@ footer {
   border-radius: var(--radius);
   cursor: pointer;
   font-size: 0.92rem;
-  font-weight: 650;
+  font-weight: 600;
   line-height: 1.1;
   transition:
     transform 180ms var(--ease),
@@ -679,7 +680,7 @@ footer {
   margin: 0 0 4px;
   color: var(--blue);
   font-size: 0.76rem;
-  font-weight: 850;
+  font-weight: 800;
   letter-spacing: 0;
   text-transform: uppercase;
 }
@@ -756,7 +757,7 @@ footer {
   gap: 12px;
   padding: 18px 2px 16px;
   color: var(--navy);
-  font-weight: 760;
+  font-weight: 700;
   line-height: 1.1;
 }
 
@@ -800,7 +801,7 @@ footer {
   padding: 11px 17px;
   border-radius: 4px;
   font-size: 0.78rem;
-  font-weight: 750;
+  font-weight: 700;
 }
 
 .phone-list {
@@ -976,8 +977,8 @@ footer {
   background: var(--green);
   border-radius: 50%;
   color: var(--green);
-  content: "✓";
-  font-weight: 850;
+  content: "";
+  font-weight: 400;
 }
 
 .process-step:nth-child(3) li::before {
@@ -1012,7 +1013,7 @@ footer {
 .process-cta strong {
   color: #39495a;
   font-size: 0.96rem;
-  font-weight: 520;
+  font-weight: 500;
 }
 
 .process-cta > span:last-child {
@@ -1021,7 +1022,7 @@ footer {
   justify-content: flex-end;
   gap: 14px;
   color: var(--green);
-  font-weight: 850;
+  font-weight: 800;
   letter-spacing: 0;
   text-transform: uppercase;
 }
@@ -1105,7 +1106,7 @@ footer {
   border-radius: var(--radius) var(--radius) 0 0;
   color: #fff;
   font-size: 0.68rem;
-  font-weight: 850;
+  font-weight: 800;
   letter-spacing: 0;
   text-align: center;
   text-transform: uppercase;
@@ -1132,7 +1133,7 @@ footer {
   border-bottom: 1px solid var(--line);
   color: var(--green);
   font-size: 2.22rem;
-  font-weight: 440;
+  font-weight: 400;
   line-height: 1;
 }
 
@@ -1253,7 +1254,7 @@ footer {
   gap: 6px;
   color: var(--ink);
   font-size: 0.74rem;
-  font-weight: 760;
+  font-weight: 700;
 }
 
 .check-form label:nth-child(3),
@@ -1264,7 +1265,7 @@ footer {
 .check-form em {
   color: var(--muted);
   font-style: normal;
-  font-weight: 520;
+  font-weight: 500;
 }
 
 .check-form input,
@@ -1319,7 +1320,7 @@ footer {
   min-height: 24px;
   margin: 0;
   color: var(--green);
-  font-weight: 760;
+  font-weight: 700;
 }
 
 .check-form.has-error .form-status {
@@ -1357,7 +1358,7 @@ footer {
   border-right: 1px solid var(--line);
   color: var(--ink);
   font-size: 0.74rem;
-  font-weight: 650;
+  font-weight: 600;
   white-space: nowrap;
 }
 
@@ -1455,7 +1456,7 @@ footer {
   border-radius: 50%;
   color: #fff;
   font-size: 0.9rem;
-  font-weight: 760;
+  font-weight: 700;
 }
 
 .footer-bottom {
@@ -1490,7 +1491,7 @@ footer {
 .has-js .reveal.is-visible,
 .reveal {
   opacity: 1;
-  transform: translateY(0);
+  transform: none;
 }
 
 @keyframes introSweep {
@@ -1513,7 +1514,7 @@ footer {
 @keyframes introMark {
   to {
     opacity: 1;
-    transform: translateY(0);
+    transform: none;
   }
 }
 
@@ -1563,16 +1564,14 @@ footer {
     box-shadow: 0 20px 60px rgba(6, 21, 39, 0.14);
     opacity: 0;
     pointer-events: none;
-    transform: translateY(-8px);
-    transition:
-      opacity 180ms var(--ease),
-      transform 180ms var(--ease);
+    transform: none;
+    transition: opacity 180ms var(--ease);
   }
 
   .site-nav.is-open {
     opacity: 1;
     pointer-events: auto;
-    transform: translateY(0);
+    transform: none;
   }
 
   .site-nav a {
@@ -1657,7 +1656,7 @@ footer {
   .hero-copy h1 {
     font-size: 2.28rem;
     line-height: 1.08;
-    font-weight: 760;
+    font-weight: 700;
   }
 
   .hero-copy p {
