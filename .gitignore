@@ -1,0 +1,6 @@
+.playwright-cli/
+screenshots/
+concepts/
+
+Thumbs.db
+.DS_Store
