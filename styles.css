@@ -193,13 +193,20 @@ textarea {
 
 .brand {
   color: var(--ink);
-  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
-  font-size: 24px;
-  font-weight: 800;
-  letter-spacing: 0;
+  font-family: var(--display-sans);
+  font-size: 23px;
+  font-variation-settings: "wght" 760;
+  font-weight: 760;
+  letter-spacing: 0.006em;
   line-height: 1;
   font-synthesis: none;
-  text-rendering: auto;
+  text-rendering: geometricPrecision;
+}
+
+.brand-m {
+  font-size: 1.055em;
+  font-variation-settings: "wght" 780;
+  font-weight: 780;
 }
 
 .site-nav {
