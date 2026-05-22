@@ -111,29 +111,69 @@ textarea {
 }
 
 .intro-preloader__mark {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
   color: #05070a;
-  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
-  font-size: clamp(27px, 3.15vw, 44px);
-  font-weight: 700;
+  font-family: var(--display-sans);
+  font-size: clamp(27px, 3.05vw, 42px);
+  font-variation-settings: "wght" 735;
+  font-weight: 735;
   line-height: 1;
-  letter-spacing: 0.012em;
+  letter-spacing: 0;
   font-kerning: none;
   font-synthesis: none;
-  text-rendering: geometricPrecision;
-  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
   opacity: 1;
 }
 
 .intro-preloader__mark span {
   display: inline-block;
-  margin-left: 1px;
+  width: 0.69em;
+  text-align: center;
+}
+
+.intro-preloader__mark span:nth-child(6) {
+  width: 0.98em;
+}
+
+.intro-preloader__mark span:nth-child(8) {
+  width: 0.79em;
+}
+
+.intro-preloader__mark .intro-dot {
+  width: 0.24em;
+  margin-left: 0.03em;
   color: var(--green);
   font-size: 0.86em;
 }
 
+@media (min-width: 900px) {
+  .intro-preloader__mark {
+    font-size: 42px;
+  }
+
+  .intro-preloader__mark span {
+    width: 29px;
+  }
+
+  .intro-preloader__mark span:nth-child(6) {
+    width: 41px;
+  }
+
+  .intro-preloader__mark span:nth-child(8) {
+    width: 33px;
+  }
+
+  .intro-preloader__mark .intro-dot {
+    width: 10px;
+    margin-left: 0;
+  }
+}
+
 .intro-preloader__line {
   width: min(164px, 34vw);
-  height: 1px;
+  height: 2px;
   overflow: hidden;
   background: rgba(6, 21, 39, 0.08);
 }
