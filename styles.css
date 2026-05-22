@@ -18,9 +18,6 @@
   --serif: Georgia, "Times New Roman", serif;
   --sans: "Segoe UI Variable Text", "Segoe UI", Arial, ui-sans-serif, system-ui, sans-serif;
   --display-sans: "Segoe UI Variable Display", "Segoe UI", Arial, ui-sans-serif, system-ui, sans-serif;
-  --wordmark-font: Bahnschrift, "Arial Narrow", Arial, ui-sans-serif, system-ui, sans-serif;
-  --wordmark-weight: 650;
-  --wordmark-tracking: 0.065em;
   --ease: cubic-bezier(0.2, 0.8, 0.2, 1);
 }
 
@@ -114,32 +111,21 @@ textarea {
 }
 
 .intro-preloader__mark {
-  display: inline-block;
-  color: #05070a;
-  font-family: var(--wordmark-font);
-  font-size: clamp(28px, 2.85vw, 40px);
-  font-stretch: 92%;
-  font-variation-settings: "wdth" 92, "wght" var(--wordmark-weight);
-  font-weight: var(--wordmark-weight);
-  line-height: 1;
-  letter-spacing: var(--wordmark-tracking);
-  font-kerning: none;
-  font-synthesis: none;
-  font-variant-ligatures: none;
-  text-rendering: geometricPrecision;
+  display: block;
+  width: clamp(198px, 16.25vw, 232px);
+  line-height: 0;
   opacity: 1;
 }
 
 @media (min-width: 900px) {
   .intro-preloader__mark {
-    width: 234px;
+    width: 232px;
   }
 }
 
-.intro-preloader__mark .intro-dot {
-  color: var(--green);
-  font-size: 0.9em;
-  letter-spacing: 0;
+.intro-preloader__mark img {
+  width: 100%;
+  height: auto;
 }
 
 .intro-preloader__line {
@@ -205,19 +191,14 @@ textarea {
 .brand {
   display: inline-flex;
   align-items: center;
-  height: 24px;
-  color: var(--ink);
-  font-family: var(--wordmark-font);
-  font-size: 22px;
-  font-stretch: 92%;
-  font-variation-settings: "wdth" 92, "wght" var(--wordmark-weight);
-  font-weight: var(--wordmark-weight);
-  letter-spacing: var(--wordmark-tracking);
+  width: 132px;
+  height: auto;
   line-height: 1;
-  font-kerning: none;
-  font-synthesis: none;
-  font-variant-ligatures: none;
-  text-rendering: geometricPrecision;
+}
+
+.brand img {
+  width: 100%;
+  height: auto;
 }
 
 .site-nav {
