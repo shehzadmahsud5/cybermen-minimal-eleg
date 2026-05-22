@@ -112,14 +112,14 @@ textarea {
 
 .intro-preloader__mark {
   display: block;
-  width: clamp(198px, 16.25vw, 232px);
+  width: clamp(202px, 16.5vw, 236px);
   line-height: 0;
   opacity: 1;
 }
 
 @media (min-width: 900px) {
   .intro-preloader__mark {
-    width: 232px;
+    width: 236px;
   }
 }
 
@@ -191,7 +191,7 @@ textarea {
 .brand {
   display: inline-flex;
   align-items: center;
-  width: 132px;
+  width: 136px;
   height: auto;
   line-height: 1;
 }
