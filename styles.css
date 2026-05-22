@@ -18,6 +18,9 @@
   --serif: Georgia, "Times New Roman", serif;
   --sans: "Segoe UI Variable Text", "Segoe UI", Arial, ui-sans-serif, system-ui, sans-serif;
   --display-sans: "Segoe UI Variable Display", "Segoe UI", Arial, ui-sans-serif, system-ui, sans-serif;
+  --wordmark-font: Bahnschrift, "Arial Narrow", Arial, ui-sans-serif, system-ui, sans-serif;
+  --wordmark-weight: 650;
+  --wordmark-tracking: 0.065em;
   --ease: cubic-bezier(0.2, 0.8, 0.2, 1);
 }
 
@@ -113,12 +116,13 @@ textarea {
 .intro-preloader__mark {
   display: inline-block;
   color: #05070a;
-  font-family: var(--display-sans);
-  font-size: clamp(28px, 3vw, 42px);
-  font-variation-settings: "wght" 700;
-  font-weight: 700;
+  font-family: var(--wordmark-font);
+  font-size: clamp(28px, 2.85vw, 40px);
+  font-stretch: 92%;
+  font-variation-settings: "wdth" 92, "wght" var(--wordmark-weight);
+  font-weight: var(--wordmark-weight);
   line-height: 1;
-  letter-spacing: 0.045em;
+  letter-spacing: var(--wordmark-tracking);
   font-kerning: none;
   font-synthesis: none;
   font-variant-ligatures: none;
@@ -128,7 +132,7 @@ textarea {
 
 @media (min-width: 900px) {
   .intro-preloader__mark {
-    width: 250px;
+    width: 234px;
   }
 }
 
@@ -203,11 +207,12 @@ textarea {
   align-items: center;
   height: 24px;
   color: var(--ink);
-  font-family: var(--display-sans);
-  font-size: 23px;
-  font-variation-settings: "wght" 700;
-  font-weight: 700;
-  letter-spacing: 0.045em;
+  font-family: var(--wordmark-font);
+  font-size: 22px;
+  font-stretch: 92%;
+  font-variation-settings: "wdth" 92, "wght" var(--wordmark-weight);
+  font-weight: var(--wordmark-weight);
+  letter-spacing: var(--wordmark-tracking);
   line-height: 1;
   font-kerning: none;
   font-synthesis: none;
