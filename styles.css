@@ -111,64 +111,31 @@ textarea {
 }
 
 .intro-preloader__mark {
-  display: flex;
-  align-items: baseline;
-  justify-content: center;
+  display: inline-block;
   color: #05070a;
   font-family: var(--display-sans);
-  font-size: clamp(27px, 3.05vw, 42px);
-  font-variation-settings: "wght" 735;
-  font-weight: 735;
+  font-size: clamp(28px, 3vw, 42px);
+  font-variation-settings: "wght" 700;
+  font-weight: 700;
   line-height: 1;
-  letter-spacing: 0;
+  letter-spacing: 0.045em;
   font-kerning: none;
   font-synthesis: none;
-  text-rendering: optimizeLegibility;
+  font-variant-ligatures: none;
+  text-rendering: geometricPrecision;
   opacity: 1;
-}
-
-.intro-preloader__mark span {
-  display: inline-block;
-  width: 0.69em;
-  text-align: center;
-}
-
-.intro-preloader__mark span:nth-child(6) {
-  width: 0.98em;
-}
-
-.intro-preloader__mark span:nth-child(8) {
-  width: 0.79em;
-}
-
-.intro-preloader__mark .intro-dot {
-  width: 0.24em;
-  margin-left: 0.03em;
-  color: var(--green);
-  font-size: 0.86em;
 }
 
 @media (min-width: 900px) {
   .intro-preloader__mark {
-    font-size: 42px;
+    width: 250px;
   }
+}
 
-  .intro-preloader__mark span {
-    width: 29px;
-  }
-
-  .intro-preloader__mark span:nth-child(6) {
-    width: 41px;
-  }
-
-  .intro-preloader__mark span:nth-child(8) {
-    width: 33px;
-  }
-
-  .intro-preloader__mark .intro-dot {
-    width: 10px;
-    margin-left: 0;
-  }
+.intro-preloader__mark .intro-dot {
+  color: var(--green);
+  font-size: 0.9em;
+  letter-spacing: 0;
 }
 
 .intro-preloader__line {
@@ -232,21 +199,20 @@ textarea {
 }
 
 .brand {
+  display: inline-flex;
+  align-items: center;
+  height: 24px;
   color: var(--ink);
   font-family: var(--display-sans);
   font-size: 23px;
-  font-variation-settings: "wght" 760;
-  font-weight: 760;
-  letter-spacing: 0.006em;
+  font-variation-settings: "wght" 700;
+  font-weight: 700;
+  letter-spacing: 0.045em;
   line-height: 1;
+  font-kerning: none;
   font-synthesis: none;
+  font-variant-ligatures: none;
   text-rendering: geometricPrecision;
-}
-
-.brand-m {
-  font-size: 1.055em;
-  font-variation-settings: "wght" 780;
-  font-weight: 780;
 }
 
 .site-nav {
