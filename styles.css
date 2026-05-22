@@ -40,7 +40,8 @@ body {
   overscroll-behavior-y: none;
   font-synthesis: none;
   text-rendering: auto;
-  -webkit-font-smoothing: subpixel-antialiased;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 img,
@@ -113,17 +114,20 @@ textarea {
 .intro-preloader__mark {
   color: #05070a;
   font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
-  font-size: clamp(1.72rem, 4.1vw, 3.55rem);
-  font-weight: 600;
+  font-size: clamp(27px, 3.15vw, 44px);
+  font-weight: 700;
   line-height: 1;
-  letter-spacing: 0.01em;
+  letter-spacing: 0.012em;
+  font-kerning: none;
   font-synthesis: none;
-  opacity: 0;
-  transform: translateY(14px);
-  animation: introMark 900ms 120ms var(--ease) forwards;
+  text-rendering: geometricPrecision;
+  -webkit-font-smoothing: antialiased;
+  opacity: 1;
 }
 
 .intro-preloader__mark span {
+  display: inline-block;
+  margin-left: 1px;
   color: var(--green);
   font-size: 0.86em;
 }
@@ -439,7 +443,7 @@ footer {
   max-width: 620px;
   margin: 0;
   border-radius: var(--radius);
-  transform-style: preserve-3d;
+  transform: none;
 }
 
 .hero-media::before {
@@ -456,11 +460,18 @@ footer {
 
 .hero-media img {
   width: 100%;
-  aspect-ratio: 1.22;
-  object-fit: cover;
+  aspect-ratio: 1387 / 1134;
+  object-fit: contain;
   object-position: 50% center;
   border-radius: var(--radius);
   box-shadow: var(--shadow);
+  image-rendering: auto;
+}
+
+@supports (image-rendering: -webkit-optimize-contrast) {
+  .hero-media img {
+    image-rendering: -webkit-optimize-contrast;
+  }
 }
 
 .section-label {
@@ -1494,6 +1505,11 @@ footer {
   transform: none;
 }
 
+.has-js .hero-media.reveal {
+  transform: none;
+  transition: opacity 420ms var(--ease);
+}
+
 @keyframes introSweep {
   0% {
     opacity: 0;
@@ -1508,13 +1524,6 @@ footer {
   100% {
     opacity: 0;
     transform: translateX(18%);
-  }
-}
-
-@keyframes introMark {
-  to {
-    opacity: 1;
-    transform: none;
   }
 }
 
